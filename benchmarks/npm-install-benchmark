@@ -1,0 +1,19 @@
+FROM node:latest
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+# add some dependencies
+RUN /bin/bash -c 'echo { \"dependencies\": { \"babel-preset-es2015\": \"^6.24.1\", \"body-parser\": \"^1.17.2\", \"express\": \"^4.15.3\", \"lodash\": \"^4.17.4\", \"react\": \"^15.6.1\", \"redux\": \"^3.7.2\", \"request\": \"^2.81.0\", \"webpack\": \"^3.2.0\" } } > package.json'
+
+RUN npm config set proxy $http_proxy
+
+RUN npm config set https-proxy $http_proxy
+
+RUN npm config set strict-ssl false
+
+RUN npm config set registry "http://registry.npmjs.org/"
+
+# install the deps
+RUN npm --proxy $http_proxy --without-ssl --insecure install
+

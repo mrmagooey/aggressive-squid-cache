@@ -1,0 +1,4 @@
+FROM centos:latest
+
+RUN yum install python3 vim imagemagick -y
+
