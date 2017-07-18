@@ -3,7 +3,7 @@ VERSION = 0.1.0
 
 # these variables are shadowed by ./benchmark/setup_benchmark.sh
 BENCHMARK_NETWORK=bench-net
-BENCHMARK_CONTAINER_NAME=squid
+BENCHMARK_CONTAINER_NAME=squid-bench
 BENCHMARK_CONTAINER_PORT=3128
 
 .PHONY: all build benchmark_apt_update benchmark_apt_install benchmark_npm_install

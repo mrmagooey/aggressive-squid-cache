@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BENCHMARK_NETWORK=bench-net
-CONTAINER_NAME=squid
+CONTAINER_NAME=squid-bench
 CONTAINER_PORT=3128
 
 start_squid () {
