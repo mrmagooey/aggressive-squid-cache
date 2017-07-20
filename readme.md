@@ -14,7 +14,7 @@ Uses Squid in `offline_mode` as the caching server, and Dockers support for cust
 
 Make a custom docker network:
 
-    docker create build-net
+    docker network create build-net
     
 Run aggressive-squid-cache in the custom network:
 
