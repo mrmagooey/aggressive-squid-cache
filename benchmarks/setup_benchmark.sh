@@ -2,7 +2,6 @@
 
 BENCHMARK_NETWORK=bench-net
 CONTAINER_NAME=squid-bench
-CONTAINER_PORT=3128
 
 start_squid () {
     docker run -d --rm --network $BENCHMARK_NETWORK --name $CONTAINER_NAME mrmagooey/aggressive-squid-cache
